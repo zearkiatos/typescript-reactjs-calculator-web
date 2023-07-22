@@ -1,7 +1,9 @@
+type ButtonClickHandler = (text: string) => void;
+
 type ButtonType = {
   type?: string;
   text: string;
-  clickHandler: Function;
+  clickHandler: ButtonClickHandler;
   backgroundColor?: string;
 };
 
