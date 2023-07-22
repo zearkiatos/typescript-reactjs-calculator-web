@@ -1,8 +1,8 @@
-import React from "react";
 import PropTypes from "prop-types";
 import "./button.css";
+import ButtonType from './ButtonType';
 const DEFAULT_BACKGROUNDCOLOR = "transparent";
-const Button = ({ type, text, clickHandler, backgroundColor }) => {
+const Button = ({ type, text, clickHandler, backgroundColor }:ButtonType) => {
   const style = {
     backgroundColor: backgroundColor
       ? backgroundColor
