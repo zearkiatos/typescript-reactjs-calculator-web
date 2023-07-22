@@ -1,8 +1,14 @@
-import PropTypes from "prop-types";
+import { FC } from "react";
 import "./button.css";
-import ButtonType from './ButtonType';
-const DEFAULT_BACKGROUNDCOLOR = "transparent";
-const Button = ({ type, text, clickHandler, backgroundColor }:ButtonType) => {
+import ButtonType from "./ButtonType";
+
+const DEFAULT_BACKGROUNDCOLOR: string = "transparent";
+const Button: FC<ButtonType> = ({
+  type,
+  text,
+  clickHandler,
+  backgroundColor,
+}) => {
   const style = {
     backgroundColor: backgroundColor
       ? backgroundColor
@@ -13,12 +19,6 @@ const Button = ({ type, text, clickHandler, backgroundColor }:ButtonType) => {
       <span>{text}</span>
     </button>
   );
-};
-
-Button.propTypes = {
-  type: PropTypes.string,
-  text: PropTypes.string.isRequired,
-  clickHandler: PropTypes.func.isRequired,
 };
 
 export default Button;

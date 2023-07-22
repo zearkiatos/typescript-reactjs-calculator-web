@@ -1,8 +1,8 @@
 type ButtonType = {
-  type: string;
+  type?: string;
   text: string;
   clickHandler: Function;
-  backgroundColor: string;
+  backgroundColor?: string;
 };
 
 export default ButtonType;
