@@ -1,20 +1,21 @@
-import React from "react";
-import PropTypes from 'prop-types'
+import { FC } from "react";
 import Button from "../Button";
+import { ButtonClickHandler } from "../Button/ButtonType";
+import NumberType from "./NumberType";
 
-const renderButtons = onClickNumber => {
+const renderButtons: FC<ButtonClickHandler> = (onClickNumber) => {
   const numbers = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0];
-  return numbers.map(number => <Button key={number} text={number.toString()} clickHandler={onClickNumber} />)
+  return numbers.map((number) => (
+    <Button
+      key={number}
+      text={number.toString()}
+      clickHandler={onClickNumber}
+    />
+  ));
 };
 
-const Numbers = ({ onClickNumber }) => (
-  <div className="numbers">
-    {renderButtons(onClickNumber)}
-  </div>
+const Numbers: FC<NumberType> = ({ onClickNumber }) => (
+  <div className="numbers">{renderButtons(onClickNumber)}</div>
 );
-
-Number.propTypes = {
-  onClickNumber: PropTypes.func.isRequired
-};
 
 export default Numbers;

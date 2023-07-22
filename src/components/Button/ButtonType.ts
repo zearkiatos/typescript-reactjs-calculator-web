@@ -7,4 +7,4 @@ type ButtonType = {
   backgroundColor?: string;
 };
 
-export default ButtonType;
+export type { ButtonType, ButtonClickHandler };

@@ -1,6 +1,6 @@
 import { FC } from "react";
 import "./button.css";
-import ButtonType from "./ButtonType";
+import { ButtonType } from "./ButtonType";
 
 const DEFAULT_BACKGROUNDCOLOR: string = "transparent";
 const Button: FC<ButtonType> = ({
