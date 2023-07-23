@@ -1,20 +1,34 @@
-import React from "react";
-import PropTypes from "prop-types";
+import { FC } from "react";
 import Button from "../Button";
+import MathOperationsType from "./MathOperationsType";
 
-const MathOperations = ({ onClickOperation, onClickEqual }) => (
+const MathOperations: FC<MathOperationsType> = ({
+  onClickOperation,
+  onClickEqual,
+}) => (
   <section className="math-operations">
-    <Button backgroundColor='#ffce5c' text="➕" clickHandler={onClickOperation} />
-    <Button text="➖" backgroundColor='#ffce5c' clickHandler={onClickOperation} />
-    <Button text="✖️" backgroundColor='#ffce5c' clickHandler={onClickOperation} />
-    <Button text="➗" backgroundColor='#ffce5c' clickHandler={onClickOperation} />
-    <Button text="🟰" backgroundColor='#ffce5c' clickHandler={onClickEqual} />
+    <Button
+      backgroundColor="#ffce5c"
+      text="➕"
+      clickHandler={onClickOperation}
+    />
+    <Button
+      text="➖"
+      backgroundColor="#ffce5c"
+      clickHandler={onClickOperation}
+    />
+    <Button
+      text="✖️"
+      backgroundColor="#ffce5c"
+      clickHandler={onClickOperation}
+    />
+    <Button
+      text="➗"
+      backgroundColor="#ffce5c"
+      clickHandler={onClickOperation}
+    />
+    <Button text="🟰" backgroundColor="#ffce5c" clickHandler={onClickEqual} />
   </section>
 );
-
-MathOperations.propTypes = {
-  onClickOperation: PropTypes.func.isRequired,
-  onClickEqual: PropTypes.func.isRequired
-};
 
 export default MathOperations;
