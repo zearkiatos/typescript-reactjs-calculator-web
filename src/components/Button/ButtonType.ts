@@ -1,6 +1,8 @@
-type ButtonClickHandler = (text: string) => void;
+import { ReactElement } from 'react';
+type ButtonClickHandler = (data: string | number) => void | ReactElement<any,any>;
 
 type ButtonType = {
+  key?: string | number;
   type?: string;
   text: string;
   clickHandler: ButtonClickHandler;

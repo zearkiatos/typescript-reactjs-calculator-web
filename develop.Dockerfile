@@ -12,7 +12,6 @@ RUN npm install -g npm
 RUN npm install
 RUN npm install react-scripts -g --silent
 RUN npx browserslist@latest --update-db
-RUN npx -p @storybook/cli sb init
 RUN npm install nodemon -g --silent
 RUN npm install @esbuild/linux-arm64
 RUN npm install concurrently -g --silent
